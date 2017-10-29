@@ -5,7 +5,7 @@
  * Copyright (c) 2017 Kamil Frydlewicz
  * www.frydlewicz.pl
  * 
- * Version: 1.0.0
+ * Version: 1.0.1
  *
  * MIT license:
  *   http://www.opensource.org/licenses/mit-license.php
@@ -144,7 +144,7 @@
             if (isJSON()) {
                 item = JSON.parse(temp);
             } else {
-                var array = temp.split("|");
+                var array = temp.split(";");
                 item = {
                     t: array[0],
                     e: Number(array[1]),
@@ -187,13 +187,13 @@
         if (isJSON()) {
             storage.setItem("__" + name, JSON.stringify(item));
         } else {
-            var temp = item.t + "|";
+            var temp = item.t + ";";
 
             if (typeof item.e === "number") {
                 temp += item.e;
             }
 
-            temp += "|";
+            temp += ";";
 
             if (typeof item.p === "string") {
                 temp += item.p;
