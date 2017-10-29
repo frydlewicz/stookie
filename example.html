@@ -2,62 +2,121 @@
 <html>
 
 <head>
-  <meta charset="UTF-8">
-  <title>stookie - storage and cookie</title>
+    <meta charset="UTF-8">
+    <title>stookie examples - storage and cookie</title>
+
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Kamil Frydlewicz">
+
+    <style>
+        textarea {
+            width: 650px;
+            height: 140px;
+        }
+    </style>
 </head>
 
 <body>
-  <script src="stookie.min.js"></script>
-  <script>
-    var sampleObject = {
-      name: "Kamil",
-      age: 25,
-    };
-    var sampleNumber = 31.69;
-    var sampleText = "This is very, very long text; enough to test it.";
+    <h1>stookie: examples</h1>
+    <textarea style="height: 100px;">
+var sampleObject = { name: "Kamil", age: 25 };
+var sampleNumber = 31.69;
+var sampleString = "This is very, very long text; enough to test it.";
+    </textarea>
 
-    setCookie("cookie_object", sampleObject);
-    setCookie("cookie_number", sampleNumber);
-    setCookie("cookie_text", sampleText, {
-      expires: new Date("2017-12-31"),
-      path: "/stookie",
-      domain: "www.example.com",
-      secure: false
-    });
+    <h2>write and read cookie:</h2>
+    <textarea>
+setCookie("cookie_object", sampleObject);
+setCookie("cookie_number", sampleNumber);
+setCookie("cookie_string", sampleString);
 
-    console.log("COOKIE:");
-    console.log(getCookie("cookie_object"));
-    console.log(getCookie("cookie_number"));
-    console.log(getCookie("cookie_text"));
+console.log(getCookie("cookie_object"));
+console.log(getCookie("cookie_number"));
+console.log(getCookie("cookie_string"));
+    </textarea>
 
-    console.log("----------");
+    <h2>write and read from local storage:</h2>
+    <textarea>
+setLocalItem("local_object", sampleObject);
+setLocalItem("local_number", sampleNumber);
+setLocalItem("local_string", sampleString);
 
-    setLocalItem("local_object", sampleObject);
-    setLocalItem("local_number", sampleNumber);
-    setLocalItem("local_text", sampleText, {
-      expires: (new Date()).getTime() + 1000 * 60 * 60,
-      path: "/"
-    });
+console.log(getLocalItem("local_object"));
+console.log(getLocalItem("local_number"));
+console.log(getLocalItem("local_string"));
+    </textarea>
 
-    console.log("LOCAL STORAGE:");
-    console.log(getLocalItem("local_object"));
-    console.log(getLocalItem("local_number"));
-    console.log(getLocalItem("local_text"));
+    <h2>write and read from session storage:</h2>
+    <textarea>
+setSessionItem("session_object", sampleObject);
+setSessionItem("session_number", sampleNumber);
+setSessionItem("session_string", sampleString);
 
-    console.log("----------");
+console.log(getSessionItem("session_object"));
+console.log(getSessionItem("session_number"));
+console.log(getSessionItem("session_string"));
+    </textarea>
 
-    setSessionItem("session_object", sampleObject);
-    setSessionItem("session_number", sampleNumber);
-    setSessionItem("session_text", sampleText, {
-      expires: "2018-01-01",
-      path: "/stookie"
-    });
+    <p>Open web developer console to see the results.</p>
 
-    console.log("SESSION STORAGE:");
-    console.log(getSessionItem("session_object"));
-    console.log(getSessionItem("session_number"));
-    console.log(getSessionItem("session_text"));
-  </script>
+    <script src="stookie.min.js"></script>
+    <script>
+        // sample variables
+        var sampleObject = {
+            name: "Kamil",
+            age: 25,
+        };
+        var sampleNumber = 31.69;
+        var sampleString = "This is very, very long text; enough to test it.";
+
+        // write cookie
+        setCookie("cookie_object", sampleObject);
+        setCookie("cookie_number", sampleNumber);
+        setCookie("cookie_string", sampleString, {
+            expires: new Date("2017-12-31"),
+            path: "/stookie",
+            domain: "www.example.com",
+            secure: false
+        });
+
+        // read cookie
+        console.log("COOKIE:");
+        console.log(getCookie("cookie_object"));
+        console.log(getCookie("cookie_number"));
+        console.log(getCookie("cookie_string"));
+
+        console.log("----------");
+
+        // write to local storage
+        setLocalItem("local_object", sampleObject);
+        setLocalItem("local_number", sampleNumber);
+        setLocalItem("local_string", sampleString, {
+            expires: (new Date()).getTime() + 1000 * 60 * 60,
+            path: "/"
+        });
+
+        // read from local storage
+        console.log("LOCAL STORAGE:");
+        console.log(getLocalItem("local_object"));
+        console.log(getLocalItem("local_number"));
+        console.log(getLocalItem("local_string"));
+
+        console.log("----------");
+
+        // write to session storage
+        setSessionItem("session_object", sampleObject);
+        setSessionItem("session_number", sampleNumber);
+        setSessionItem("session_string", sampleString, {
+            expires: "2018-01-01",
+            path: "/stookie"
+        });
+
+        // read from session storage
+        console.log("SESSION STORAGE:");
+        console.log(getSessionItem("session_object"));
+        console.log(getSessionItem("session_number"));
+        console.log(getSessionItem("session_string"));
+    </script>
 </body>
 
 </html>
