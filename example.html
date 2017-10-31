@@ -3,10 +3,11 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>stookie examples - storage and cookie</title>
 
     <meta name="robots" content="index, follow">
     <meta name="author" content="Kamil Frydlewicz">
+
+    <title>stookie examples - storage and cookie</title>
 
     <style>
         textarea {
@@ -18,14 +19,14 @@
 
 <body>
     <h1>stookie: examples</h1>
-    <textarea style="height: 100px;">
+    <textarea style="height: 100px;" readonly>
 var sampleObject = { name: "Kamil", age: 25 };
 var sampleNumber = 31.69;
 var sampleString = "This is very, very long text; enough to test it.";
     </textarea>
 
     <h2>write and read cookie:</h2>
-    <textarea>
+    <textarea readonly>
 setCookie("cookie_object", sampleObject);
 setCookie("cookie_number", sampleNumber);
 setCookie("cookie_string", sampleString);
@@ -36,7 +37,7 @@ console.log(getCookie("cookie_string"));
     </textarea>
 
     <h2>write and read from local storage:</h2>
-    <textarea>
+    <textarea readonly>
 setLocalItem("local_object", sampleObject);
 setLocalItem("local_number", sampleNumber);
 setLocalItem("local_string", sampleString);
@@ -47,7 +48,7 @@ console.log(getLocalItem("local_string"));
     </textarea>
 
     <h2>write and read from session storage:</h2>
-    <textarea>
+    <textarea readonly>
 setSessionItem("session_object", sampleObject);
 setSessionItem("session_number", sampleNumber);
 setSessionItem("session_string", sampleString);
