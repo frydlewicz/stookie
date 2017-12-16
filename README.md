@@ -10,6 +10,10 @@ Full browser support: ```Chrome 5+, Firefox 3.5+, IE 8+, Opera 10.5+, Safari 4+`
 ```html
 <script src="stookie.min.js"></script>
 ```
+You can use our cdn hosting:
+```html
+<script src="https://cdn.frydlewicz.pl/app/stookie/stookie.min.js"></script>
+```
 
 ## Use
 ```js
@@ -82,7 +86,7 @@ setSessionItem("session_string", sampleString, {
 ```expires``` - can be an object (Date), a number (timestamp) or string.
 
 ## Examples
-[stookie example](http://frydlewicz.pl/api/stookie/example.html)
+[stookie example](https://frydlewicz.pl/app/stookie/example.html)
 
 ## License
 [MIT License](LICENSE.txt)
