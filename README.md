@@ -88,5 +88,8 @@ setSessionItem("session_string", sampleString, {
 ## Examples
 [stookie example](https://frydlewicz.pl/app/stookie/example.html)
 
+## Author
+[Kamil Frydlewicz](https://frydlewicz.pl)
+
 ## License
 [MIT License](LICENSE.txt)
