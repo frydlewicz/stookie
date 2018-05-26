@@ -1,6 +1,6 @@
-# stookie 1.0.1
+# stookie 1.0.2
 
-![stookie version](https://img.shields.io/badge/stookie-1.0.1-green.svg)
+![stookie version](https://img.shields.io/badge/stookie-1.0.2-green.svg)
 [![License](https://img.shields.io/badge/license-MIT-red.svg)](https://opensource.org/licenses/MIT)
 [![PayPal donate](https://img.shields.io/badge/donate-PayPal-blue.svg)](https://www.paypal.com/pools/c/80Y6qAZyX8)
 
