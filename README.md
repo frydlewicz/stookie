@@ -2,7 +2,6 @@
 
 ![stookie version](https://img.shields.io/badge/stookie-1.0.2-green.svg)
 [![License](https://img.shields.io/badge/license-MIT-red.svg)](https://opensource.org/licenses/MIT)
-[![PayPal donate](https://img.shields.io/badge/donate-PayPal-blue.svg)](https://www.paypal.com/pools/c/80Y6qAZyX8)
 
 JavaScript plugin being full compatible cookie, local and session storage library. It allows you to write and read objects, numbers and plain strings with a specified expiration date. If your browser does not support web storage, plugin will use cookie instead. It's free also in commercial use.
 
@@ -17,7 +16,7 @@ Full browser support: ```Chrome 5+, Firefox 3.5+, IE 8+, Opera 10.5+, Safari 4+`
 ```
 You can use our cdn hosting:
 ```html
-<script src="https://cdn.frydlewicz.pl/app/stookie/stookie.min.js"></script>
+<script src="https://cdn.kon.ovh/app/stookie/stookie.min.js"></script>
 ```
 
 ## Use
